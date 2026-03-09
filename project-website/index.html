@@ -1,0 +1,371 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="AltRoute is an HCI course project website documenting research, design process, prototypes, and evaluation results."
+    />
+    <title>AltRoute | CS185 HCI Project</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Manrope:wght@400;500;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+
+    <header class="site-header" id="top">
+      <div class="container nav-wrap">
+        <a class="brand" href="#top" aria-label="AltRoute home">
+          <img src="assets/logo.png" alt="AltRoute logo" />
+          <span>AltRoute</span>
+        </a>
+
+        <button class="menu-toggle" aria-label="Toggle menu" aria-expanded="false" aria-controls="site-nav">
+          <span></span><span></span><span></span>
+        </button>
+
+        <nav id="site-nav" class="site-nav" aria-label="Primary">
+          <a href="#overview">Overview</a>
+          <a href="#process">Process</a>
+          <a href="#prototype">Prototype</a>
+          <a href="#videos">Videos</a>
+          <a href="#deliverables">Deliverables</a>
+          <a href="#team">Team</a>
+        </nav>
+      </div>
+    </header>
+
+    <main id="main-content">
+      <section class="hero section">
+        <div class="container hero-grid">
+          <div>
+            <p class="eyebrow">CS185 HCI COURSE PROJECT</p>
+            <h1>AltRoute: Personalized Beta for Indoor Climbers</h1>
+            <p class="value-prop">
+              Different bodies need different movement strategies, even on the same route.
+            </p>
+            <p>
+              AltRoute helps indoor climbers quickly generate and follow beta adapted to body profile,
+              reach, and physical constraints. We designed this product for climbers who get stuck between
+              attempts and need fast, understandable guidance in the gym.
+            </p>
+            <div class="hero-actions">
+              <a class="btn btn-primary" href="#prototype">View Prototype</a>
+              <a class="btn" href="#deliverables">Open Deliverables</a>
+            </div>
+
+            <div class="team-inline" aria-label="Project team members">
+              <article>
+                <h3>Hyun C.</h3>
+                <p>Design</p>
+              </article>
+              <article>
+                <h3>Shuang L.</h3>
+                <p>Research</p>
+              </article>
+              <article>
+                <h3>Xandra W.</h3>
+                <p>Engineering</p>
+              </article>
+            </div>
+          </div>
+          <div class="hero-visual">
+            <img src="assets/hero.png" alt="Hero illustration for AltRoute project" />
+          </div>
+        </div>
+      </section>
+
+      <section id="overview" class="section">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Project Overview</p>
+            <h2>Problem Space, Users, and Product Concept</h2>
+          </div>
+          <div class="cards three">
+            <article class="card">
+              <h3>Target Users</h3>
+              <p>
+                Indoor climbers, especially beginner-to-intermediate users, who need quick route support
+                during active sessions.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Problem Space</h3>
+              <p>
+                Existing beta often assumes one ideal body and movement style. Many climbers cannot apply it
+                directly, causing frustration and repeated failed attempts.
+              </p>
+            </article>
+            <article class="card">
+              <h3>Product Concept</h3>
+              <p>
+                Capture route context, combine body profile inputs, and produce stepwise, personalized beta
+                that users can follow in real time.
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="process" class="section tint">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Design Process</p>
+            <h2>From Research to Iteration</h2>
+          </div>
+
+          <div class="process-grid">
+            <article class="process-step">
+              <img src="assets/placeholder-image.png" alt="Needfinding placeholder" />
+              <h3>Needfinding</h3>
+              <p>Interviewed climbers and observed in-gym behavior to identify critical friction moments.</p>
+            </article>
+            <article class="process-step">
+              <img src="assets/placeholder-image.png" alt="Research insights placeholder" />
+              <h3>Research Insights</h3>
+              <p>Synthesized repeated patterns around body mismatch, confidence loss, and route uncertainty.</p>
+            </article>
+            <article class="process-step">
+              <img src="assets/placeholder-image.png" alt="POV and HMW placeholder" />
+              <h3>POVs &amp; HMWs</h3>
+              <p>Converted findings into actionable opportunity statements and design prompts.</p>
+            </article>
+            <article class="process-step">
+              <img src="assets/placeholder-image.png" alt="Brainstorming placeholder" />
+              <h3>Brainstorming</h3>
+              <p>Explored divergent concepts for guidance systems, body adaptation, and interaction flow.</p>
+            </article>
+            <article class="process-step">
+              <img src="assets/placeholder-image.png" alt="Sketching placeholder" />
+              <h3>Sketching &amp; Exploration</h3>
+              <p>Compared multiple information architectures and screened for speed and clarity.</p>
+            </article>
+            <article class="process-step">
+              <img src="assets/placeholder-image.png" alt="Low-fi prototyping placeholder" />
+              <h3>Low-Fi Prototype</h3>
+              <p>Validated core interaction sequence and corrected major navigation uncertainty.</p>
+            </article>
+            <article class="process-step">
+              <img src="assets/placeholder-image.png" alt="Medium-fi prototyping placeholder" />
+              <h3>Medium-Fi Prototype</h3>
+              <p>Refined hierarchy, wording, and controls to support faster in-session decisions.</p>
+            </article>
+            <article class="process-step">
+              <img src="assets/placeholder-image.png" alt="High-fi prototyping placeholder" />
+              <h3>High-Fi Prototype</h3>
+              <p>Polished interaction details and aligned visual language with product goals.</p>
+            </article>
+            <article class="process-step">
+              <img src="assets/placeholder-image.png" alt="Testing results placeholder" />
+              <h3>Testing Results</h3>
+              <p>Measured task success and identified final usability opportunities before final report.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="prototype" class="section">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Prototype</p>
+            <h2>Interactive Demo and Task Flows</h2>
+          </div>
+
+          <div class="prototype-layout">
+            <div class="embed-shell">
+              <iframe
+                title="AltRoute Figma prototype"
+                src="https://www.figma.com/embed?embed_host=share&url=https://www.figma.com/proto/mm2RdzlnWcByrynOd0TpXq/AltRoute?node-id=0-1&t=cCM0v3kg4W2yWc03-1"
+                allowfullscreen
+              ></iframe>
+            </div>
+            <div class="prototype-side">
+              <a
+                class="btn btn-primary full"
+                href="https://www.figma.com/proto/mm2RdzlnWcByrynOd0TpXq/AltRoute?node-id=0-1&t=cCM0v3kg4W2yWc03-1"
+                target="_blank"
+                rel="noopener"
+                >Open Prototype in Figma</a
+              >
+              <p>
+                The prototype focuses on short decision windows in climbing sessions: discover route context,
+                generate personalized beta, and execute with guidance.
+              </p>
+            </div>
+          </div>
+
+          <div class="task-grid">
+            <details open>
+              <summary>Simple Task: Find and watch a community beta</summary>
+              <p>Home → choose gym → open community beta → play video.</p>
+            </details>
+            <details>
+              <summary>Moderate Task: Generate a personalized beta</summary>
+              <p>Capture/upload route → select holds → input body data → generate beta.</p>
+            </details>
+            <details>
+              <summary>Complex Task: Follow guided climbing mode</summary>
+              <p>Start guided mode → navigate steps with previous/next → exit session safely.</p>
+            </details>
+          </div>
+        </div>
+      </section>
+
+      <section id="videos" class="section tint">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Videos</p>
+            <h2>Concept and Demo Videos</h2>
+          </div>
+
+          <div class="cards two">
+            <article class="card video-card">
+              <h3>Concept Video</h3>
+              <div class="embed-shell">
+                <iframe
+                  title="Concept Video"
+                  src="https://www.youtube.com/embed/RCPi7rZCIkg"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="link-row">
+                <a href="https://www.youtube.com/watch?v=RCPi7rZCIkg" target="_blank" rel="noopener">Streaming Link</a>
+                <a href="videos/concept-video.mp4" download>Download MP4</a>
+              </div>
+            </article>
+
+            <article class="card video-card">
+              <h3>Demo Video</h3>
+              <div class="embed-shell">
+                <iframe
+                  title="Demo Video Placeholder"
+                  src="https://www.youtube.com/embed/dQw4w9WgXcQ"
+                  allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+                  allowfullscreen
+                ></iframe>
+              </div>
+              <div class="link-row">
+                <a href="https://youtu.be/dQw4w9WgXcQ" target="_blank" rel="noopener">Streaming Link</a>
+                <a href="videos/demo-video.mp4" download>Download MP4</a>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="deliverables" class="section">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Deliverables</p>
+            <h2>All Course Submissions</h2>
+          </div>
+
+          <div class="deliverables-list">
+            <article>
+              <h3>GR1 – Needfinding</h3>
+              <p><a href="deliverables/gr1-needfinding-slides-link.txt">Slides</a></p>
+            </article>
+            <article>
+              <h3>GR2 – Needfinding, POVs, HMWs, Brainstorming &amp; Experience Prototypes</h3>
+              <p><a href="deliverables/gr2-needfinding-pov-hmw-slides-link.txt">Slides</a></p>
+            </article>
+            <article>
+              <h3>GR4 – Concept Video</h3>
+              <p>
+                <a href="deliverables/gr4-concept-slides-link.txt">Slides</a>
+                <a href="videos/concept-video.mp4" download>Video Download</a>
+                <a href="https://www.youtube.com/watch?v=RCPi7rZCIkg" target="_blank" rel="noopener">Video Stream</a>
+              </p>
+            </article>
+            <article>
+              <h3>GR5 – Sketching, Low-Fi Prototyping &amp; Usability Testing</h3>
+              <p><a href="deliverables/gr5-sketching-lowfi-testing-slides-link.txt">Slides</a></p>
+            </article>
+            <article>
+              <h3>GR6a – Medium-Fi Prototype</h3>
+              <p>
+                <a href="deliverables/gr6a-mediumfi-slides-link.txt">Slides</a>
+                <a href="https://www.figma.com/proto/mm2RdzlnWcByrynOd0TpXq/AltRoute?node-id=0-1&t=cCM0v3kg4W2yWc03-1" target="_blank" rel="noopener">Figma Link</a>
+                <a href="deliverables/gr6a-readme-link.txt">README</a>
+              </p>
+            </article>
+            <article>
+              <h3>GR6b – High-Fi Prototype</h3>
+              <p>
+                <a href="deliverables/gr6b-highfi-slides-link.txt">Slides</a>
+                <a href="deliverables/gr6b-prototype-link.txt">Prototype Link</a>
+                <a href="deliverables/gr6b-readme-link.txt">README</a>
+              </p>
+            </article>
+            <article>
+              <h3>GR7 – Heuristic Evaluation Synthesis</h3>
+              <p>
+                <a href="deliverables/gr7-heuristic-eval.pdf">PDF</a>
+                <a href="deliverables/gr7-heuristic-eval.xlsx">XLSX</a>
+              </p>
+            </article>
+            <article>
+              <h3>GR8 – Poster, Pitch &amp; Demo Video</h3>
+              <p>
+                <a href="deliverables/gr8-slides-link.txt">Slides</a>
+                <a href="deliverables/gr8-script.pdf">Script</a>
+                <a href="deliverables/gr8-poster.pdf">Poster</a>
+                <a href="videos/demo-video.mp4" download>Video Download</a>
+              </p>
+            </article>
+            <article>
+              <h3>GR9 – Final Report</h3>
+              <p><a href="deliverables/gr9-final-report-link.txt">Google Doc Link</a></p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <section id="team" class="section tint">
+        <div class="container">
+          <div class="section-head">
+            <p class="eyebrow">Team</p>
+            <h2>Who Built AltRoute</h2>
+          </div>
+
+          <div class="cards three">
+            <article class="card team-card">
+              <img src="assets/placeholder-image.png" alt="Portrait placeholder for Hyun C." />
+              <h3>Hyun Cho</h3>
+              <p class="role">Design Lead</p>
+              <p>Owned interaction flow structure, visual language refinement, and prototype coherence.</p>
+            </article>
+            <article class="card team-card">
+              <img src="assets/placeholder-image.png" alt="Portrait placeholder for Shuang L." />
+              <h3>Shuang Li</h3>
+              <p class="role">Research Lead</p>
+              <p>Led interview synthesis, POV/HMW framing, and evaluation planning.</p>
+            </article>
+            <article class="card team-card">
+              <img src="assets/placeholder-image.png" alt="Portrait placeholder for Xandra W." />
+              <h3>Xandra Wong</h3>
+              <p class="role">Engineering Lead</p>
+              <p>Implemented prototype behavior details and built supporting project website infrastructure.</p>
+            </article>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer class="site-footer">
+      <div class="container footer-grid">
+        <p>CS185 · Human-Computer Interaction · University · 2026</p>
+        <a href="https://github.com/your-org/your-repo" target="_blank" rel="noopener">GitHub Repository</a>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>

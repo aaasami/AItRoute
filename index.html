@@ -1,429 +1,684 @@
-<!DOCTYPE HTML>
-<!--
-	Dimension by HTML5 UP
-	html5up.net | @ajlkn
-	Free for personal and commercial use under the CCA 3.0 license (html5up.net/license)
--->
-<html>
-	<head>
-		<title>AltRoute</title>
-		<meta charset="utf-8" />
-		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
-		<link rel="stylesheet" href="assets/css/main.css" />
-		<noscript><link rel="stylesheet" href="assets/css/noscript.css" /></noscript>
-	</head>
-	<body class="is-preload">
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AltRoute — Personalized Beta for Indoor Climbers</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Figtree:ital,wght@0,400;0,600;0,700;0,800;1,400;1,700&display=swap" rel="stylesheet">
+<style>
+* { box-sizing: border-box; margin: 0; padding: 0; }
+html { scroll-behavior: smooth; }
+body { font-family: 'Figtree', sans-serif; background: #f0f7fa; color: #111; overflow-x: hidden; }
 
-		<!-- Wrapper -->
-			<div id="wrapper">
+nav {
+  position: sticky; top: 0; z-index: 200;
+  background: #0a1a2e;
+  display: flex; align-items: center; justify-content: space-between;
+  padding: 0 52px; height: 62px;
+  box-shadow: 0 2px 20px rgba(10,26,46,0.4);
+}
+.nav-logo { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+.brand-logo-img { width: 34px; height: 34px; border-radius: 8px; object-fit: cover; display: block; }
+.nav-logo-icon {
+  width: 34px; height: 34px; border-radius: 8px;
+  background: #1ec8e0;
+  display: grid; place-items: center;
+  font-size: 1.1rem;
+}
+.nav-brand-name { font-weight: 800; font-size: 1.1rem; letter-spacing: 0.08em; text-transform: uppercase; color: white; }
+.nav-links { display: flex; gap: 32px; list-style: none; }
+.nav-links a {
+  color: rgba(255,255,255,0.65); font-weight: 600; font-size: 0.84rem;
+  letter-spacing: 0.06em; text-decoration: none; text-transform: uppercase;
+  transition: color 0.2s; padding-bottom: 3px; border-bottom: 2px solid transparent;
+}
+.nav-links a:hover, .nav-links a.active { color: #1ec8e0; border-color: #1ec8e0; }
 
-				<!-- Header -->
-					<header id="header">
-						<div class="logo">
-							<span class="icon fa-gem"></span>
-						</div>
-						<div class="content">
-							<div class="inner">
-								<h1>AltRoute</h1>
-								<h4>Different Bodies. Different Solutions.</h4>
-								<p>CS185 Project Demo</p>
-							</div>
-						</div>
-						<nav>
-							<ul>
-								<!-- <li><a href="#intro">Intro</a></li> -->
-								 <li><a href="#about">About</a></li>
-								<li><a href="#work">Work</a></li>
-								<li><a href="#contact">Contact</a></li>
-								<!-- <li><a href="#elements">Elements</a></li> -->
-							</ul>
-						</nav>
-					</header>
-
-				<!-- Main -->
-					<div id="main">
-
-						<!-- Intro -->
-							<!-- <article id="intro">
-								<h2 class="major">Intro</h2>
-								<span class="image main"><img src="images/pic01.jpg" alt="" /></span>
-								<p>Welcome to AltRoute.</p>
-							</article> -->
-
-						<!-- About -->
-							<article id="about">
-								<h1 class="major">About</h1>
-								<p>Welcome to AltRoute.</br>
-								Team members: Hyun Cho, Shuang Li, Xandra Wong.</p>
-								<span class="image main"><img src="images/pic03.jpg" alt="" /></span>
-								<h2>Why AltRoute?</h2>
-								<p>AltRoute is a platform that allows users to generate alternative routes based on their body type 
-									and physical capabilities, ensuring that each user gets a personalized 
-									experience tailored to their specific needs.</p>
-	
-							</article>
-
-						<!-- Work -->
-							<article id="work">
-								<h1 class="major">Work</h1>
-								<p>We are building AltRoute to explore AI-assisted route planning. 
-									Below is our design process for building this product.</p>
-								<!-- <span class="image main"><img src="images/pic02.jpg" alt="" /></span> -->
-								 <div class="work-container">
-									<div class="work-card" style="margin-bottom: 20px;">
-										<h2>GR1: Needfinding</h2>
-										<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
-											padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-											border-radius: 8px; will-change: transform;">
-											<iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-												src="https://www.canva.com/design/DAG_HPCtNrk/OvkJ7iMSsr3tDSn4cMnqwQ/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-											</iframe>
-										</div>
-										<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAG_HPCtNrk&#x2F;OvkJ7iMSsr3tDSn4cMnqwQ&#x2F;view?utm_content=DAG_HPCtNrk&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Link to presentation</a>
-									</div>
-										<div class="work-card" style="margin-bottom: 20px;">
-											<h2>GR2: Additional Needfinding, POVs, HMWs, Brainstorming & Experience Prototypes </h2>
-										<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
-											padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-											border-radius: 8px; will-change: transform;">
-											<iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-												src="https://www.canva.com/design/DAG_sJnTq4s/Aed57qoflLDYb0aBLwb0_g/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-											</iframe>
-										</div>
-											<a href="https:&#x2F;&#x2F;www.canva.com&#x2F;design&#x2F;DAG_sJnTq4s&#x2F;Aed57qoflLDYb0aBLwb0_g&#x2F;view?utm_content=DAG_sJnTq4s&amp;utm_campaign=designshare&amp;utm_medium=embeds&amp;utm_source=link" target="_blank" rel="noopener">Link to presentation</a>
-										</div>
-										<div class="work-card" style="margin-bottom: 20px;">
-											<h2>GR4: Concept Video</h2>
-											<iframe width="560" height="315" src="https://www.youtube.com/embed/RCPi7rZCIkg?si=_2fy3G5Q18q8npsL" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" referrerpolicy="strict-origin-when-cross-origin" allowfullscreen></iframe>
-											<a href="https://drive.google.com/file/d/1JP3Ww-aOWTW-CpEXpOY623GIq5vqUk_X/view?usp=drive_link" download="AltRoute_Concept_Video.mp4">
-												<button>Download Video</button>
-											</a>
-										</div>
-										<div class="work-card" style="margin-bottom: 20px;">
-											<h2>GR5: Sketching, Low-Fi Prototyping & Pilot Usability Testing</h2>
-										<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
-											padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-											border-radius: 8px; will-change: transform;">
-												<iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-													src="https://www.canva.com/design/DAHBDbc8QNU/UWzwgrMEL2zldpnsdleL9Q/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-											</iframe>
-										</div>
-										<a href="https://www.canva.com/design/DAHBDbc8QNU/UWzwgrMEL2zldpnsdleL9Q/view?utm_content=DAHBDbc8QNU&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hc1d9cfbd88" target="_blank" rel="noopener">Link to presentation</a>
-									</div>
-									<div class="work-card" style="margin-bottom: 20px;">
-										<h2>GR6: Medium-Fi Prototype</h2>
-										<div style="position: relative; width: 100%; height: 0; padding-top: 56.2500%;
-											padding-bottom: 0; box-shadow: 0 2px 8px 0 rgba(63,69,81,0.16); margin-top: 1.6em; margin-bottom: 0.9em; overflow: hidden;
-											border-radius: 8px; will-change: transform;">
-												<iframe loading="lazy" style="position: absolute; width: 100%; height: 100%; top: 0; left: 0; border: none; padding: 0;margin: 0;"
-													src="https://www.canva.com/design/DAHBzef16gM/evD3CLce8GNJb8pBJSdbOA/view?embed" allowfullscreen="allowfullscreen" allow="fullscreen">
-											</iframe>
-										</div>
-										<a href="https://www.canva.com/design/DAHBzef16gM/evD3CLce8GNJb8pBJSdbOA/view?utm_content=DAHBzef16gM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h824af0e923" target="_blank" rel="noopener">Link to presentation</a>
-									</div>
-									<div class="work-card" style="margin-bottom: 20px;">
-										<h2>Med-fi Prototype</h2>
-										<a href="https://www.figma.com/proto/mm2RdzlnWcByrynOd0TpXq/AltRoute?node-id=0-1&t=cCM0v3kg4W2yWc03-1" target="_blank" rel="noopener">Link to prototype</a>
-									</div>
-									<div class="work-card" style="margin-bottom: 20px;">
-										<h2>README</h2>
-										<a href="https://docs.google.com/document/d/1phgdvpClwRCrVRB7n30kXYmqSvAyYi6rchHqxfYr-78/edit?tab=t.0 " target="_blank" rel="noopener">Link to readme</a>
-									</div>
-									 </div>
-								</article>
-
-
-						<!-- Contact -->
-							<article id="contact">
-								<h2 class="major">Contact</h2>
-								<form method="post" action="#">
-									<div class="fields">
-										<div class="field half">
-											<label for="name">Name</label>
-											<input type="text" name="name" id="name" />
-										</div>
-										<div class="field half">
-											<label for="email">Email</label>
-											<input type="text" name="email" id="email" />
-										</div>
-										<div class="field">
-											<label for="message">Message</label>
-											<textarea name="message" id="message" rows="4"></textarea>
-										</div>
-									</div>
-									<ul class="actions">
-										<li><input type="submit" value="Send Message" class="primary" /></li>
-										<li><input type="reset" value="Reset" /></li>
-									</ul>
-								</form>
-								<ul class="icons">
-									<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-									<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-									<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-									<li><a href="#" class="icon brands fa-github"><span class="label">GitHub</span></a></li>
-								</ul>
-							</article>
-
-						<!-- Elements -->
-							<article id="elements">
-								<h2 class="major">Elements</h2>
-
-								<section>
-									<h3 class="major">Text</h3>
-									<p>This is <b>bold</b> and this is <strong>strong</strong>. This is <i>italic</i> and this is <em>emphasized</em>.
-									This is <sup>superscript</sup> text and this is <sub>subscript</sub> text.
-									This is <u>underlined</u> and this is code: <code>for (;;) { ... }</code>. Finally, <a href="#">this is a link</a>.</p>
-									<hr />
-									<h2>Heading Level 2</h2>
-									<h3>Heading Level 3</h3>
-									<h4>Heading Level 4</h4>
-									<h5>Heading Level 5</h5>
-									<h6>Heading Level 6</h6>
-									<hr />
-									<h4>Blockquote</h4>
-									<blockquote>Fringilla nisl. Donec accumsan interdum nisi, quis tincidunt felis sagittis eget tempus euismod. Vestibulum ante ipsum primis in faucibus vestibulum. Blandit adipiscing eu felis iaculis volutpat ac adipiscing accumsan faucibus. Vestibulum ante ipsum primis in faucibus lorem ipsum dolor sit amet nullam adipiscing eu felis.</blockquote>
-									<h4>Preformatted</h4>
-									<pre><code>i = 0;
-
-while (!deck.isInOrder()) {
-    print 'Iteration ' + i;
-    deck.shuffle();
-    i++;
+#overview {
+  position: relative; overflow: hidden;
+  background: #0a1a2e;
+  min-height: calc(100vh - 62px);
+  display: grid; grid-template-columns: 1fr 1fr;
+  align-items: center; gap: 60px;
+  padding: 80px 72px;
 }
 
-print 'It took ' + i + ' iterations to sort the deck.';</code></pre>
-								</section>
+.wall-bg {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    radial-gradient(circle 3px at 15% 22%, rgba(30,200,224,0.5) 0%, transparent 100%),
+    radial-gradient(circle 4px at 28% 45%, rgba(255,120,60,0.6) 0%, transparent 100%),
+    radial-gradient(circle 3px at 42% 18%, rgba(255,210,50,0.5) 0%, transparent 100%),
+    radial-gradient(circle 5px at 55% 60%, rgba(30,200,224,0.4) 0%, transparent 100%),
+    radial-gradient(circle 3px at 68% 30%, rgba(120,220,100,0.5) 0%, transparent 100%),
+    radial-gradient(circle 4px at 80% 72%, rgba(255,100,100,0.4) 0%, transparent 100%),
+    radial-gradient(circle 3px at 92% 20%, rgba(30,200,224,0.4) 0%, transparent 100%),
+    radial-gradient(circle 4px at 8% 80%, rgba(255,180,80,0.4) 0%, transparent 100%),
+    radial-gradient(circle 3px at 35% 85%, rgba(200,100,255,0.4) 0%, transparent 100%),
+    radial-gradient(circle 5px at 72% 88%, rgba(30,200,224,0.3) 0%, transparent 100%);
+}
+.wall-panels {
+  position: absolute; inset: 0; pointer-events: none;
+  background-image:
+    linear-gradient(rgba(255,255,255,0.025) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.025) 1px, transparent 1px);
+  background-size: 60px 60px;
+}
+.hero-glow {
+  position: absolute; right: -100px; top: 50%; transform: translateY(-50%);
+  width: 600px; height: 600px; border-radius: 50%;
+  background: radial-gradient(circle, rgba(30,200,224,0.12) 0%, transparent 70%);
+  pointer-events: none;
+}
 
-								<section>
-									<h3 class="major">Lists</h3>
+.hero-left { position: relative; z-index: 1; }
+.hero-eyebrow {
+  display: inline-flex; align-items: center; gap: 8px;
+  background: rgba(30,200,224,0.15); border: 1px solid rgba(30,200,224,0.3);
+  border-radius: 100px; padding: 5px 14px;
+  font-size: 0.72rem; font-weight: 700; letter-spacing: 0.14em;
+  text-transform: uppercase; color: #1ec8e0; margin-bottom: 22px;
+}
+.hero-eyebrow-logo { width: 16px; height: 16px; border-radius: 4px; object-fit: cover; display: block; }
+.hero-title {
+  font-size: clamp(3.2rem, 5.5vw, 5.8rem); font-weight: 800;
+  line-height: 1.0; color: white; margin-bottom: 10px; letter-spacing: -0.01em;
+}
+.hero-title .accent { color: #1ec8e0; }
+.hero-tagline {
+  font-size: 1.05rem; font-weight: 600; font-style: italic;
+  color: rgba(255,255,255,0.65); margin-bottom: 18px; line-height: 1.55;
+}
+.hero-desc {
+  font-size: 0.92rem; color: rgba(255,255,255,0.5);
+  line-height: 1.85; max-width: 440px; margin-bottom: 40px;
+}
+.hero-btns { display: flex; gap: 14px; flex-wrap: wrap; }
 
-									<h4>Unordered</h4>
-									<ul>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+.btn {
+  display: inline-flex; align-items: center; gap: 8px;
+  padding: 12px 26px; border-radius: 100px; font-family: 'Figtree', sans-serif;
+  font-weight: 700; font-size: 0.88rem; letter-spacing: 0.04em;
+  text-decoration: none; transition: all 0.22s; border: none; cursor: pointer;
+}
+.btn-cyan { background: #1ec8e0; color: #0a1a2e; }
+.btn-cyan:hover { background: #0eb8d0; transform: translateY(-2px); box-shadow: 0 8px 24px rgba(30,200,224,0.4); }
+.btn-ghost { background: transparent; color: white; border: 1.5px solid rgba(255,255,255,0.3); }
+.btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); }
 
-									<h4>Alternate</h4>
-									<ul class="alt">
-										<li>Dolor pulvinar etiam.</li>
-										<li>Sagittis adipiscing.</li>
-										<li>Felis enim feugiat.</li>
-									</ul>
+.hero-right { display: flex; justify-content: center; position: relative; z-index: 1; }
+.phone-wrap { position: relative; width: min(360px, 78vw); animation: float 5s ease-in-out infinite; }
+@keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
 
-									<h4>Ordered</h4>
-									<ol>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis viverra.</li>
-										<li>Felis enim feugiat.</li>
-										<li>Dolor pulvinar etiam.</li>
-										<li>Etiam vel felis lorem.</li>
-										<li>Felis enim et feugiat.</li>
-									</ol>
-									<h4>Icons</h4>
-									<ul class="icons">
-										<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
-										<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
-										<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
-										<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
-									</ul>
+.chalk-ring {
+  position: absolute; border-radius: 50%; border: 1px dashed rgba(255,255,255,0.1);
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+  animation: pulse 4s ease-in-out infinite;
+}
+.chalk-ring:nth-child(1) { width: 320px; height: 320px; animation-delay: 0s; }
+.chalk-ring:nth-child(2) { width: 400px; height: 400px; animation-delay: 1s; opacity: 0.6; }
+@keyframes pulse { 0%,100%{opacity:0.4; transform:translate(-50%,-50%) scale(1)} 50%{opacity:0.8; transform:translate(-50%,-50%) scale(1.03)} }
 
-									<h4>Actions</h4>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions stacked">
-										<li><a href="#" class="button primary">Default</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-								</section>
+.phone-outer {
+  width: 100%; aspect-ratio: 9/19; background: #111;
+  border-radius: 40px; padding: 10px;
+  box-shadow: 0 40px 90px rgba(0,0,0,0.7), 0 0 0 1px rgba(255,255,255,0.06);
+  position: relative; z-index: 1;
+}
+.phone-screen { width: 100%; height: 100%; border-radius: 32px; overflow: hidden; background: #1ec8e0; display: flex; flex-direction: column; }
+.phone-status { height: 26px; display: flex; align-items: center; justify-content: center; flex-shrink: 0; }
+.phone-notch { width: 70px; height: 7px; background: #0a1a2e; border-radius: 4px; }
+.phone-body { flex: 1; background: white; display: flex; flex-direction: column; overflow: hidden; }
+.phone-shot { width: 100%; height: 100%; object-fit: cover; display: block; }
+.phone-proto-embed { flex: 1; width: 100%; border: none; }
+.hero-proto-shot { width: 100%; height: auto; display: block; border-radius: 28px; box-shadow: 0 22px 48px rgba(0,0,0,0.38); }
+.phone-header { background: #1ec8e0; padding: 10px 14px 12px; font-weight: 800; font-size: 1.3rem; letter-spacing: 0.1em; text-transform: uppercase; color: #0a1a2e; }
+.phone-content { flex: 1; padding: 11px 12px; display: flex; flex-direction: column; gap: 9px; overflow: hidden; }
+.phone-search { background: #f0f0f0; border-radius: 20px; padding: 7px 12px; font-size: 0.67rem; color: #999; display: flex; align-items: center; gap: 5px; }
+.phone-banner { background: #e8f6ff; border-radius: 11px; padding: 11px 13px; border: 1.5px solid #1ec8e0; }
+.phone-banner-title { font-size: 0.73rem; font-weight: 800; text-transform: uppercase; color: #0a1a2e; line-height: 1.25; margin-bottom: 4px; }
+.phone-banner-sub { font-size: 0.59rem; color: #555; margin-bottom: 9px; }
+.phone-banner-btn { background: #1ec8e0; border-radius: 20px; padding: 5px 12px; font-size: 0.6rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; color: #0a1a2e; display: inline-block; }
+.phone-user { display: flex; align-items: center; gap: 8px; }
+.phone-avatar { width: 26px; height: 26px; border-radius: 50%; background: #ddd; }
+.phone-username { font-size: 0.67rem; font-weight: 700; color: #0a1a2e; }
+.phone-userloc { font-size: 0.57rem; color: #888; }
+.phone-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 5px; flex: 1; overflow: hidden; }
+.phone-cell { border-radius: 7px; min-height: 48px; }
+.phone-tabs { height: 44px; background: white; border-top: 1px solid #eee; display: flex; align-items: center; justify-content: space-around; flex-shrink: 0; }
+.tab-i { display: flex; flex-direction: column; align-items: center; gap: 1px; }
+.tab-ic { font-size: 0.9rem; }
+.tab-lb { font-size: 0.5rem; color: #999; }
+.tab-i.on .tab-lb { color: #1ec8e0; }
 
-								<section>
-									<h3 class="major">Table</h3>
-									<h4>Default</h4>
-									<div class="table-wrapper">
-										<table>
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
+.hold-float {
+  position: absolute; border-radius: 50%;
+  display: flex; align-items: center; justify-content: center;
+  font-size: 1.1rem; animation: holdBob 3s ease-in-out infinite;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.3);
+  z-index: 0;
+}
+.hold-float.h1 { width: 36px; height: 36px; background: #ff7c3c; top: 15%; right: -40px; animation-delay: 0s; }
+.hold-float.h2 { width: 28px; height: 28px; background: #1ec8e0; bottom: 25%; left: -45px; animation-delay: 1s; }
+.hold-float.h3 { width: 22px; height: 22px; background: #ffd030; top: 60%; right: -30px; animation-delay: 0.5s; }
+@keyframes holdBob { 0%,100%{transform:translateY(0) rotate(0deg)} 50%{transform:translateY(-8px) rotate(10deg)} }
 
-									<h4>Alternate</h4>
-									<div class="table-wrapper">
-										<table class="alt">
-											<thead>
-												<tr>
-													<th>Name</th>
-													<th>Description</th>
-													<th>Price</th>
-												</tr>
-											</thead>
-											<tbody>
-												<tr>
-													<td>Item One</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Two</td>
-													<td>Vis ac commodo adipiscing arcu aliquet.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Three</td>
-													<td> Morbi faucibus arcu accumsan lorem.</td>
-													<td>29.99</td>
-												</tr>
-												<tr>
-													<td>Item Four</td>
-													<td>Vitae integer tempus condimentum.</td>
-													<td>19.99</td>
-												</tr>
-												<tr>
-													<td>Item Five</td>
-													<td>Ante turpis integer aliquet porttitor.</td>
-													<td>29.99</td>
-												</tr>
-											</tbody>
-											<tfoot>
-												<tr>
-													<td colspan="2"></td>
-													<td>100.00</td>
-												</tr>
-											</tfoot>
-										</table>
-									</div>
-								</section>
+.holds-row { display: flex; gap: 10px; align-items: center; margin-bottom: 18px; }
+.hold-dot {
+  border-radius: 50%; display: inline-block;
+  box-shadow: inset 0 -2px 4px rgba(0,0,0,0.25), 0 2px 6px rgba(0,0,0,0.2);
+}
+.hold-dot.sm { width: 14px; height: 14px; }
+.hold-dot.md { width: 20px; height: 20px; }
+.hold-dot.lg { width: 28px; height: 28px; }
+.hd-cyan   { background: radial-gradient(circle at 35% 35%, #5ee8f8, #1ec8e0); }
+.hd-orange { background: radial-gradient(circle at 35% 35%, #ffa060, #e05020); }
+.hd-yellow { background: radial-gradient(circle at 35% 35%, #ffe060, #f0b020); }
+.hd-green  { background: radial-gradient(circle at 35% 35%, #80e880, #30a840); }
+.hd-purple { background: radial-gradient(circle at 35% 35%, #d090f8, #8040c0); }
 
-								<section>
-									<h3 class="major">Buttons</h3>
-									<ul class="actions">
-										<li><a href="#" class="button primary">Primary</a></li>
-										<li><a href="#" class="button">Default</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button">Default</a></li>
-										<li><a href="#" class="button small">Small</a></li>
-									</ul>
-									<ul class="actions">
-										<li><a href="#" class="button primary icon solid fa-download">Icon</a></li>
-										<li><a href="#" class="button icon solid fa-download">Icon</a></li>
-									</ul>
-									<ul class="actions">
-										<li><span class="button primary disabled">Disabled</span></li>
-										<li><span class="button disabled">Disabled</span></li>
-									</ul>
-								</section>
+.divider { height: 1px; background: #dde8f0; }
+section { padding: 80px 72px; }
+.s-head { margin-bottom: 48px; }
+.s-title { font-size: clamp(2rem, 3.5vw, 2.8rem); font-weight: 800; color: #0a1a2e; margin-bottom: 10px; }
+.s-sub { font-size: 0.92rem; color: #666; line-height: 1.8; max-width: 520px; }
+.s-title-center { text-align: center; }
+.s-underline { width: 56px; height: 3px; background: #1ec8e0; border-radius: 2px; margin: 0 auto 44px; }
 
-								<section>
-									<h3 class="major">Form</h3>
-									<form method="post" action="#">
-										<div class="fields">
-											<div class="field half">
-												<label for="demo-name">Name</label>
-												<input type="text" name="demo-name" id="demo-name" value="" placeholder="Jane Doe" />
-											</div>
-											<div class="field half">
-												<label for="demo-email">Email</label>
-												<input type="email" name="demo-email" id="demo-email" value="" placeholder="jane@untitled.tld" />
-											</div>
-											<div class="field">
-												<label for="demo-category">Category</label>
-												<select name="demo-category" id="demo-category">
-													<option value="">-</option>
-													<option value="1">Manufacturing</option>
-													<option value="1">Shipping</option>
-													<option value="1">Administration</option>
-													<option value="1">Human Resources</option>
-												</select>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-low" name="demo-priority" checked>
-												<label for="demo-priority-low">Low</label>
-											</div>
-											<div class="field half">
-												<input type="radio" id="demo-priority-high" name="demo-priority">
-												<label for="demo-priority-high">High</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-copy" name="demo-copy">
-												<label for="demo-copy">Email me a copy</label>
-											</div>
-											<div class="field half">
-												<input type="checkbox" id="demo-human" name="demo-human" checked>
-												<label for="demo-human">Not a robot</label>
-											</div>
-											<div class="field">
-												<label for="demo-message">Message</label>
-												<textarea name="demo-message" id="demo-message" placeholder="Enter your message" rows="6"></textarea>
-											</div>
-										</div>
-										<ul class="actions">
-											<li><input type="submit" value="Send Message" class="primary" /></li>
-											<li><input type="reset" value="Reset" /></li>
-										</ul>
-									</form>
-								</section>
+#about { background: white; }
+.about-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 72px; align-items: start; }
+.about-copy p { font-size: 0.92rem; color: #555; line-height: 1.9; margin-bottom: 14px; }
+.pull-quote {
+  border-left: 4px solid #1ec8e0; padding: 14px 20px;
+  background: #f0fbfd; border-radius: 0 10px 10px 0;
+  margin: 24px 0; font-style: italic; font-size: 0.98rem;
+  color: #0a1a2e; line-height: 1.7;
+}
+.features { display: flex; flex-direction: column; gap: 14px; }
+.feature-card {
+  background: #f5f9fb; border: 1.5px solid #dde8f0;
+  border-radius: 14px; padding: 18px 20px;
+  display: flex; gap: 14px; align-items: flex-start;
+  transition: border-color 0.2s, box-shadow 0.2s;
+}
+.feature-card:hover { border-color: #1ec8e0; box-shadow: 0 4px 18px rgba(30,200,224,0.12); }
+.feature-ico {
+  width: 42px; height: 42px; border-radius: 10px; flex-shrink: 0;
+  display: grid; place-items: center; font-size: 1.2rem;
+}
+.feature-card h4 { font-size: 0.9rem; font-weight: 700; color: #0a1a2e; margin-bottom: 4px; }
+.feature-card p { font-size: 0.8rem; color: #777; line-height: 1.6; }
 
-							</article>
+.grade-strip {
+  background: #0a1a2e; padding: 28px 72px;
+  display: flex; align-items: center; justify-content: space-between; gap: 20px;
+  flex-wrap: wrap;
+}
+.grade-strip-label { color: rgba(255,255,255,0.5); font-size: 0.75rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; }
+.grades { display: flex; gap: 10px; align-items: center; flex-wrap: wrap; }
+.grade-pill {
+  padding: 6px 14px; border-radius: 100px; font-weight: 800; font-size: 0.82rem;
+  letter-spacing: 0.04em;
+}
+.grade-strip-text { color: rgba(255,255,255,0.7); font-size: 0.85rem; font-style: italic; max-width: 320px; line-height: 1.6; }
 
-					</div>
+#prototype { background: #f0f7fa; }
+.proto-layout { display: grid; grid-template-columns: 1fr 1fr; gap: 48px; align-items: start; }
+.proto-embed-wrap {
+  background: transparent;
+  border-radius: 34px;
+  overflow: hidden;
+  aspect-ratio: 9/19;
+  width: min(280px, 100%);
+  margin: 0 auto;
+  border: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  box-shadow: 0 18px 40px rgba(10, 26, 46, 0.18);
+}
+.proto-embed-wrap iframe {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 140%;
+  height: 140%;
+  border: none;
+  border-radius: 34px;
+  transform: translate(-50%, -50%);
+  transform-origin: center center;
+}
+.proto-shot { width: 100%; height: 100%; object-fit: cover; display: block; }
 
-				<!-- Footer -->
-					<footer id="footer">
-						<p class="copyright">&copy; Untitled. Design: <a href="https://html5up.net">HTML5 UP</a>.</p>
-					</footer>
+@media (max-width: 1080px) {
+  .proto-embed-wrap iframe {
+    width: 135%;
+    height: 135%;
+  }
+}
+.proto-side { display: flex; flex-direction: column; gap: 16px; }
+.proto-cta { background: #1ec8e0; border-radius: 14px; padding: 24px 22px; color: #0a1a2e; }
+.proto-cta h3 { font-size: 1.15rem; font-weight: 800; margin-bottom: 8px; }
+.proto-cta p { font-size: 0.84rem; line-height: 1.7; opacity: 0.8; margin-bottom: 18px; }
+.btn-dark { display: inline-flex; align-items: center; gap: 6px; padding: 10px 20px; background: #0a1a2e; color: white; border-radius: 100px; font-weight: 700; font-size: 0.82rem; letter-spacing: 0.04em; text-decoration: none; transition: opacity 0.2s; }
+.btn-dark:hover { opacity: 0.8; }
+.task-list { display: flex; flex-direction: column; gap: 10px; }
+.task { background: white; border: 1.5px solid #dde8f0; border-radius: 12px; overflow: hidden; }
+.task-h { display: flex; align-items: center; gap: 9px; padding: 12px 15px; font-weight: 700; font-size: 0.85rem; color: #0a1a2e; }
+.chip { padding: 3px 10px; border-radius: 100px; font-size: 0.63rem; font-weight: 700; letter-spacing: 0.06em; text-transform: uppercase; }
+.cg { background: #d4f5e5; color: #1a8a50; }
+.cy { background: #fff3cc; color: #996600; }
+.cr { background: #ffe0d4; color: #c04010; }
+.task-steps { padding: 0 15px 11px; font-size: 0.77rem; color: #888; display: flex; align-items: center; gap: 4px; flex-wrap: wrap; }
+.arr { color: #1ec8e0; font-weight: 700; }
 
-			</div>
+#videos { background: white; }
+.video-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.vcard { background: #f0f7fa; border: 1.5px solid #dde8f0; border-radius: 14px; overflow: hidden; transition: transform 0.22s, box-shadow 0.22s; }
+.vcard:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(30,200,224,0.15); border-color: #1ec8e0; }
+.vcard a { text-decoration: none; color: inherit; display: block; }
+.vthumb { aspect-ratio: 16/9; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.vthumb-bg { position: absolute; inset: 0; }
+.vthumb-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
+.vtag { position: absolute; top: 10px; left: 10px; z-index: 1; background: rgba(10,26,46,0.7); color: white; font-size: 0.64rem; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; padding: 4px 9px; border-radius: 6px; }
+.vplay { width: 46px; height: 46px; border-radius: 50%; z-index: 1; border: 2px solid rgba(255,255,255,0.4); background: rgba(255,255,255,0.1); display: grid; place-items: center; transition: background 0.2s; }
+.vcard:hover .vplay { background: #1ec8e0; border-color: #1ec8e0; }
+.vplay svg { fill: white; width: 14px; height: 14px; margin-left: 3px; }
+.vinfo { padding: 14px 16px 18px; }
+.vinfo h4 { font-size: 0.92rem; font-weight: 700; color: #0a1a2e; margin-bottom: 5px; }
+.vinfo p { font-size: 0.78rem; color: #888; line-height: 1.55; }
+.vcard.pending { opacity: 0.92; }
+.vcard.pending .vplay { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.08); }
+.vcard.pending:hover { transform: none; box-shadow: none; border-color: #dde8f0; }
+.vcard.pending a { cursor: default; pointer-events: none; }
 
-		<!-- BG -->
-			<div id="bg"></div>
+#process { background: #f0f7fa; }
+.process-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; }
+.proc-card { background: white; border: 1.5px solid #dde8f0; border-radius: 14px; overflow: hidden; transition: border-color 0.2s; }
+.proc-card:hover { border-color: #1ec8e0; }
+.proc-img { aspect-ratio: 4/3; display: flex; align-items: center; justify-content: center; font-size: 3rem; }
+.proc-body { padding: 20px 22px 24px; }
+.proc-label { font-size: 0.68rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.12em; color: #1ec8e0; margin-bottom: 6px; }
+.proc-body h3 { font-size: 1rem; font-weight: 800; color: #0a1a2e; margin-bottom: 8px; }
+.proc-body p { font-size: 0.81rem; color: #666; line-height: 1.7; margin-bottom: 16px; }
+.btn-proc { display: inline-flex; align-items: center; gap: 6px; padding: 9px 18px; background: #0a1a2e; color: white; border-radius: 100px; font-weight: 700; font-size: 0.78rem; text-decoration: none; transition: opacity 0.2s; }
+.btn-proc:hover { opacity: 0.8; }
 
-		<!-- Scripts -->
-			<script src="assets/js/jquery.min.js"></script>
-			<script src="assets/js/browser.min.js"></script>
-			<script src="assets/js/breakpoints.min.js"></script>
-			<script src="assets/js/util.js"></script>
-			<script src="assets/js/main.js"></script>
+#deliverables { background: #ffffff; }
+.deliverables-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 18px; }
+.d-card { background: #f7fbfd; border: 1.5px solid #dde8f0; border-radius: 14px; overflow: hidden; }
+.d-head { padding: 14px 14px 8px; font-size: 0.85rem; font-weight: 800; color: #0a1a2e; }
+.d-preview { aspect-ratio: 16/10; background: #eaf3f8; border-top: 1px solid #dde8f0; border-bottom: 1px solid #dde8f0; position: relative; }
+.d-preview iframe { width: 100%; height: 100%; border: none; }
+.d-preview img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.d-preview-empty { height: 100%; display: grid; place-items: center; font-size: 0.8rem; color: #6f8090; text-align: center; padding: 12px; }
+.d-links { padding: 10px 14px 14px; display: flex; gap: 10px; flex-wrap: wrap; }
+.d-links a { font-size: 0.76rem; color: #0a1a2e; text-decoration: none; border-bottom: 1px solid #9bb3c4; }
+.d-links a:hover { color: #1ec8e0; border-color: #1ec8e0; }
 
-	</body>
+#team { background: white; }
+.team-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 22px; max-width: 840px; margin: 0 auto; }
+.team-card { background: #f0f7fa; border: 1.5px solid #dde8f0; border-radius: 16px; padding: 40px 26px; text-align: center; transition: border-color 0.2s, box-shadow 0.2s; }
+.team-card:hover { border-color: #1ec8e0; box-shadow: 0 8px 28px rgba(30,200,224,0.12); }
+.team-avatar { width: 70px; height: 70px; border-radius: 50%; margin: 0 auto 14px; display: flex; align-items: center; justify-content: center; font-size: 1.5rem; font-weight: 800; color: white; }
+.team-photo { width: 108px; height: 108px; border-radius: 50%; margin: 0 auto 18px; object-fit: cover; display: block; border: 2px solid #cfe2ee; }
+.team-card h3 { font-size: 1.12rem; font-weight: 800; color: #0a1a2e; margin-bottom: 0; }
+
+footer { background: #0a1a2e; color: rgba(255,255,255,0.5); padding: 32px 72px; display: flex; align-items: center; justify-content: space-between; font-size: 0.8rem; gap: 20px; }
+.footer-logo { display: flex; align-items: center; gap: 8px; }
+.footer-brand { font-weight: 800; font-size: 1rem; letter-spacing: 0.08em; text-transform: uppercase; color: white; }
+.footer-links { display: flex; gap: 24px; list-style: none; flex-wrap: wrap; }
+.footer-links a { color: rgba(255,255,255,0.5); text-decoration: none; transition: color 0.2s; }
+.footer-links a:hover { color: #1ec8e0; }
+
+.wall-section-bg { position: relative; overflow: hidden; }
+.wall-section-bg::before {
+  content: '';
+  position: absolute; inset: 0; pointer-events: none; z-index: 0;
+  background-image:
+    radial-gradient(circle 8px at 5% 30%, rgba(30,200,224,0.12) 0%, transparent 100%),
+    radial-gradient(circle 6px at 95% 70%, rgba(255,120,60,0.1) 0%, transparent 100%),
+    radial-gradient(circle 5px at 90% 15%, rgba(255,210,50,0.1) 0%, transparent 100%),
+    radial-gradient(circle 7px at 8% 80%, rgba(120,220,100,0.08) 0%, transparent 100%);
+}
+.wall-section-bg > * { position: relative; z-index: 1; }
+
+.reveal { opacity: 0; transform: translateY(22px); transition: opacity 0.55s ease, transform 0.55s ease; }
+.reveal.visible { opacity: 1; transform: none; }
+
+.rope-divider {
+  height: 4px; position: relative; margin: 0;
+  background: repeating-linear-gradient(90deg, #1ec8e0 0px, #0a9ab0 8px, #1ec8e0 16px);
+  opacity: 0.4;
+}
+
+@media (max-width: 1080px) {
+  nav { padding: 0 20px; }
+  .nav-links { gap: 14px; overflow-x: auto; white-space: nowrap; }
+  #overview, section { padding: 56px 20px; }
+  #overview { grid-template-columns: 1fr; gap: 40px; min-height: auto; }
+  .about-layout, .proto-layout, .video-grid, .process-grid, .deliverables-grid, .team-grid { grid-template-columns: 1fr; }
+  .grade-strip { padding: 22px 20px; }
+  footer { padding: 24px 20px; flex-direction: column; align-items: flex-start; }
+}
+
+@media (min-width: 1081px) {
+  .video-grid { grid-template-columns: repeat(2, 1fr); }
+}
+</style>
+</head>
+<body>
+<nav>
+  <a class="nav-logo" href="#overview">
+    <img class="brand-logo-img" src="images/logo.jpg" alt="AltRoute logo">
+    <span class="nav-brand-name">AltRoute</span>
+  </a>
+  <ul class="nav-links">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#prototype">Prototype</a></li>
+    <li><a href="#videos">Videos</a></li>
+    <li><a href="#deliverables">Deliverables</a></li>
+    <li><a href="#team">Team</a></li>
+  </ul>
+</nav>
+
+<section id="overview">
+  <div class="wall-bg"></div>
+  <div class="wall-panels"></div>
+  <div class="hero-glow"></div>
+
+  <div class="hero-left reveal">
+    <div class="hero-eyebrow"><img class="hero-eyebrow-logo" src="images/logo.jpg" alt="">CS185 HCI Course Project</div>
+    <h1 class="hero-title">Alt<span class="accent">Route</span></h1>
+
+    <div class="holds-row" style="margin-bottom: 16px;">
+      <div class="hold-dot lg hd-cyan"></div>
+      <div class="hold-dot md hd-orange"></div>
+      <div class="hold-dot sm hd-yellow"></div>
+      <div class="hold-dot md hd-green"></div>
+      <div class="hold-dot sm hd-purple"></div>
+      <span style="font-size:0.78rem;color:rgba(255,255,255,0.4);letter-spacing:0.06em;margin-left:4px;">PERSONALIZED BETA</span>
+    </div>
+
+    <p class="hero-tagline">Different bodies need different movement strategies,<br>even on the same route.</p>
+    <p class="hero-desc">AltRoute helps indoor climbers quickly generate and follow beta adapted to body profile, reach, and physical constraints. For climbers who get stuck between attempts and need fast guidance in the gym.</p>
+    <div class="hero-btns">
+      <a href="#prototype" class="btn btn-cyan">View Prototype</a>
+      <a href="#deliverables" class="btn btn-ghost">Deliverables</a>
+    </div>
+  </div>
+
+  <div class="hero-right reveal" style="transition-delay:0.15s">
+    <div class="phone-wrap">
+      <div class="chalk-ring"></div>
+      <div class="chalk-ring"></div>
+      <div class="hold-float h1">🟠</div>
+      <div class="hold-float h2">🔵</div>
+      <div class="hold-float h3">🟡</div>
+      <img class="hero-proto-shot" src="images/prototype-home.png" alt="AltRoute prototype home screen">
+    </div>
+  </div>
+</section>
+
+<div class="rope-divider"></div>
+
+<div class="grade-strip">
+  <span class="grade-strip-label">Built for every grade</span>
+  <div class="grades">
+    <div class="hold-dot sm" style="background:radial-gradient(circle at 35% 35%,#90ee90,#3a9a3a)"></div>
+    <span class="grade-pill" style="background:#2a6a2a;color:#90ee90">V0–V2</span>
+    <div class="hold-dot sm" style="background:radial-gradient(circle at 35% 35%,#6ec6f8,#1a7aba)"></div>
+    <span class="grade-pill" style="background:#1a4a8a;color:#6ec6f8">V3–V5</span>
+    <div class="hold-dot sm" style="background:radial-gradient(circle at 35% 35%,#ffa060,#c04010)"></div>
+    <span class="grade-pill" style="background:#8a2a10;color:#ffa060">V6–V8</span>
+    <div class="hold-dot sm" style="background:radial-gradient(circle at 35% 35%,#e090e0,#8020a0)"></div>
+    <span class="grade-pill" style="background:#601080;color:#e090e0">V9+</span>
+  </div>
+  <p class="grade-strip-text">"Different bodies need different beta — AltRoute makes sure yours works for <em>you</em>."</p>
+</div>
+
+<div class="divider"></div>
+
+<section id="about" class="wall-section-bg">
+  <div class="about-layout">
+    <div class="about-copy reveal">
+      <div class="holds-row">
+        <div class="hold-dot md hd-cyan"></div>
+        <div class="hold-dot sm hd-orange"></div>
+        <div class="hold-dot md hd-yellow"></div>
+      </div>
+      <h2 class="s-title">Why Beta Needs<br>to Be Personal</h2>
+      <div style="width:48px;height:3px;background:#1ec8e0;border-radius:2px;margin:12px 0 20px;"></div>
+      <p>When climbers get stuck on a route, beta advice often comes from someone with a different body. A move that's "easy" for a 6ft climber may be physically impossible for someone shorter.</p>
+      <div class="pull-quote">"I kept watching the same beta videos but my arms just couldn't reach that way. I needed someone to tell me <em>my</em> version of the move."</div>
+      <p>AltRoute uses your body profile — height, wingspan, flexibility — to generate step-by-step movement sequences tailored specifically to you.</p>
+    </div>
+    <div class="features reveal" style="transition-delay:0.12s">
+      <div class="feature-card">
+        <div class="feature-ico" style="background:#e8f9fb;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><ellipse cx="12" cy="14" rx="7" ry="5" fill="#1ec8e0" opacity="0.3"/><ellipse cx="12" cy="13" rx="6" ry="4" fill="#1ec8e0"/><ellipse cx="10" cy="11" rx="2" ry="1.5" fill="white" opacity="0.5"/></svg></div>
+        <div><h4>Body-Adaptive Beta</h4><p>Movement strategies based on your reach, height, and physical constraints — not a hypothetical average climber.</p></div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-ico" style="background:#fff8e8;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><circle cx="12" cy="12" r="8" fill="#f0b020" opacity="0.3"/><circle cx="12" cy="12" r="6" fill="#f0b020"/><text x="12" y="16" text-anchor="middle" font-size="9" fill="white" font-weight="bold">3s</text></svg></div>
+        <div><h4>In-Gym Speed</h4><p>Designed for the short window between attempts. Fast input, fast output — no walls of text mid-session.</p></div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-ico" style="background:#fef0ee;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><rect x="4" y="4" width="16" height="16" rx="3" fill="#e05020" opacity="0.25"/><rect x="6" y="6" width="12" height="12" rx="2" fill="#e05020" opacity="0.5"/><circle cx="12" cy="12" r="3" fill="#e05020"/></svg></div>
+        <div><h4>Route Recognition</h4><p>Identify gym routes and pull community beta, or generate new AI-powered sequences on the spot.</p></div>
+      </div>
+      <div class="feature-card">
+        <div class="feature-ico" style="background:#f0eeff;"><svg width="24" height="24" viewBox="0 0 24 24" fill="none"><ellipse cx="8" cy="12" rx="4" ry="6" fill="#8040c0" opacity="0.3"/><ellipse cx="16" cy="12" rx="4" ry="6" fill="#8040c0" opacity="0.3"/><ellipse cx="8" cy="12" rx="3" ry="5" fill="#8040c0"/><ellipse cx="16" cy="12" rx="3" ry="5" fill="#8040c0"/></svg></div>
+        <div><h4>Community Beta</h4><p>Browse video beta shared by climbers with similar body types. Learn from people who climb like you.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="rope-divider"></div>
+
+<section id="prototype">
+  <div class="s-head reveal" style="text-align:center">
+    <div class="holds-row" style="justify-content:center">
+      <div class="hold-dot sm hd-purple"></div>
+      <div class="hold-dot md hd-cyan"></div>
+      <div class="hold-dot sm hd-orange"></div>
+    </div>
+    <h2 class="s-title s-title-center">Our App</h2>
+    <div class="s-underline"></div>
+  </div>
+  <div class="proto-layout">
+    <div class="reveal">
+      <div class="proto-embed-wrap">
+        <iframe src="https://www.figma.com/embed?embed_host=share&hide-ui=1&url=https://www.figma.com/proto/mm2RdzlnWcByrynOd0TpXq/AltRoute?node-id=0-1&t=cCM0v3kg4W2yWc03-1" allowfullscreen title="AltRoute Figma Prototype"></iframe>
+      </div>
+    </div>
+    <div class="proto-side reveal" style="transition-delay:0.12s">
+      <div class="proto-cta">
+        <h3>Open Prototype in Figma</h3>
+        <p>Explore the interactive prototype — generate personalized beta and follow AI-powered step-by-step guidance.</p>
+        <a href="https://www.figma.com/proto/mm2RdzlnWcByrynOd0TpXq/AltRoute?node-id=0-1&t=cCM0v3kg4W2yWc03-1" target="_blank" rel="noopener" class="btn-dark">↗ Open Prototype</a>
+      </div>
+      <div class="task-list">
+        <div class="task">
+          <div class="task-h"><span class="chip cg">Simple</span> Find &amp; watch community beta</div>
+          <div class="task-steps"><span>Home</span><span class="arr">›</span><span>Choose gym</span><span class="arr">›</span><span>Community beta</span><span class="arr">›</span><span>Play video</span></div>
+        </div>
+        <div class="task">
+          <div class="task-h"><span class="chip cy">Moderate</span> Generate a personalized beta</div>
+          <div class="task-steps"><span>Scan route</span><span class="arr">›</span><span>Body profile</span><span class="arr">›</span><span>Get AI beta</span><span class="arr">›</span><span>Follow steps</span></div>
+        </div>
+        <div class="task">
+          <div class="task-h"><span class="chip cr">Complex</span> Upload &amp; share your own beta</div>
+          <div class="task-steps"><span>Record attempt</span><span class="arr">›</span><span>Tag route &amp; profile</span><span class="arr">›</span><span>Publish</span></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="videos" class="wall-section-bg">
+  <div class="s-head reveal" style="text-align:center">
+    <div class="holds-row" style="justify-content:center">
+      <div class="hold-dot sm hd-orange"></div>
+      <div class="hold-dot md hd-green"></div>
+      <div class="hold-dot sm hd-cyan"></div>
+    </div>
+    <h2 class="s-title s-title-center">Videos</h2>
+    <div class="s-underline"></div>
+  </div>
+  <div class="video-grid">
+    <div class="vcard reveal">
+      <a href="https://www.youtube.com/embed/RCPi7rZCIkg?autoplay=1" target="_blank" rel="noopener">
+        <div class="vthumb">
+          <img class="vthumb-img" src="images/concept-video.jpg" alt="Concept video preview">
+          <div class="vthumb-bg" style="background:linear-gradient(135deg,rgba(20,40,56,0.45),rgba(10,26,46,0.55))"></div>
+          <div class="vtag">Concept Video</div>
+          <div class="vplay"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+        </div>
+        <div class="vinfo">
+          <h4>Concept Video</h4>
+          <p>Project concept and problem framing for personalized climbing beta.</p>
+        </div>
+      </a>
+    </div>
+    <div class="vcard pending reveal" style="transition-delay:0.1s">
+      <a href="javascript:void(0)" aria-disabled="true">
+        <div class="vthumb">
+          <div class="vthumb-bg" style="background:linear-gradient(135deg,#1a3040,#0e2030)"></div>
+          <div class="vtag">Final Demo</div>
+          <div class="vplay"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
+        </div>
+        <div class="vinfo">
+          <h4>Final Demo</h4>
+          <p>Coming soon. The final demo video will be added after production is complete.</p>
+        </div>
+      </a>
+    </div>
+  </div>
+</section>
+
+<section id="deliverables" class="wall-section-bg">
+  <div class="s-head reveal" style="text-align:center">
+    <div class="holds-row" style="justify-content:center">
+      <div class="hold-dot sm hd-cyan"></div>
+      <div class="hold-dot md hd-yellow"></div>
+      <div class="hold-dot sm hd-purple"></div>
+    </div>
+    <h2 class="s-title s-title-center">Course Deliverables</h2>
+    <div class="s-underline"></div>
+  </div>
+  <div class="deliverables-grid">
+    <article class="d-card reveal">
+      <div class="d-head">GR1 - Needfinding</div>
+      <div class="d-preview">
+        <iframe src="https://www.canva.com/design/DAG_HPCtNrk/9oNdAyf0n5kb042dMcFSiw/view?embed" loading="lazy" title="GR1 preview"></iframe>
+      </div>
+      <div class="d-links"><a href="https://www.canva.com/design/DAG_HPCtNrk/9oNdAyf0n5kb042dMcFSiw/view?utm_content=DAG_HPCtNrk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hc3a89ac27c" target="_blank" rel="noopener">Open Link</a></div>
+    </article>
+    <article class="d-card reveal" style="transition-delay:0.05s">
+      <div class="d-head">GR2 - POVs, HMWs &amp; Experience Prototypes</div>
+      <div class="d-preview">
+        <iframe src="https://www.canva.com/design/DAG_sJnTq4s/Aed57qoflLDYb0aBLwb0_g/view?embed" loading="lazy" title="GR2 preview"></iframe>
+      </div>
+      <div class="d-links"><a href="https://www.canva.com/design/DAG_sJnTq4s/Aed57qoflLDYb0aBLwb0_g/view" target="_blank" rel="noopener">Open Link</a></div>
+    </article>
+    <article class="d-card reveal" style="transition-delay:0.1s">
+      <div class="d-head">GR4 - Concept Video</div>
+      <div class="d-preview">
+        <img src="images/concept-video.jpg" alt="GR4 concept video preview">
+      </div>
+      <div class="d-links"><a href="https://www.youtube.com/embed/RCPi7rZCIkg?autoplay=1" target="_blank" rel="noopener">Open Video</a></div>
+    </article>
+    <article class="d-card reveal" style="transition-delay:0.15s">
+      <div class="d-head">GR5 - Sketching, Low-Fi &amp; User Testing</div>
+      <div class="d-preview">
+        <iframe src="https://www.canva.com/design/DAHBDbc8QNU/UWzwgrMEL2zldpnsdleL9Q/view?embed" loading="lazy" title="GR5 preview"></iframe>
+      </div>
+      <div class="d-links"><a href="https://www.canva.com/design/DAHBDbc8QNU/UWzwgrMEL2zldpnsdleL9Q/view" target="_blank" rel="noopener">Open Link</a></div>
+    </article>
+    <article class="d-card reveal" style="transition-delay:0.2s">
+      <div class="d-head">GR6 - Medium-Fi Figma Prototype</div>
+      <div class="d-preview">
+        <iframe src="https://www.canva.com/design/DAHBzef16gM/evD3CLce8GNJb8pBJSdbOA/view?embed" loading="lazy" title="GR6a preview"></iframe>
+      </div>
+      <div class="d-links">
+        <a href="https://www.canva.com/design/DAHBzef16gM/evD3CLce8GNJb8pBJSdbOA/view" target="_blank" rel="noopener">Open Link</a>
+        <a href="https://docs.google.com/document/d/1phgdvpClwRCrVRB7n30kXYmqSvAyYi6rchHqxfYr-78/edit?usp=sharing" target="_blank" rel="noopener">README</a>
+      </div>
+    </article>
+    <article class="d-card reveal" style="transition-delay:0.25s">
+      <div class="d-head">GR9 - Poster, Pitch &amp; Video of the Figma hi-fi prototype</div>
+      <div class="d-preview"><div class="d-preview-empty">Upload materials by noon today.</div></div>
+      <div class="d-links"><a href="https://www.canva.com/" target="_blank" rel="noopener">Open Link</a></div>
+    </article>
+    <article class="d-card reveal" style="transition-delay:0.3s">
+      <div class="d-head">GR10 - Final Report</div>
+      <div class="d-preview"><div class="d-preview-empty">Preview pending</div></div>
+      <div class="d-links"><a href="https://docs.google.com/" target="_blank" rel="noopener">Open Link</a></div>
+    </article>
+  </div>
+</section>
+
+<div class="divider"></div>
+
+<section id="team" class="wall-section-bg">
+  <div class="s-head reveal" style="text-align:center">
+    <div class="holds-row" style="justify-content:center">
+      <div class="hold-dot sm hd-green"></div>
+      <div class="hold-dot md hd-orange"></div>
+      <div class="hold-dot sm hd-cyan"></div>
+    </div>
+    <h2 class="s-title s-title-center">Team</h2>
+    <div class="s-underline"></div>
+  </div>
+    <div class="team-grid">
+      <div class="team-card reveal">
+      <img class="team-photo" src="images/team-hyun.jpg" alt="Portrait of Hyun Cho">
+      <h3>Hyun Cho</h3>
+    </div>
+    <div class="team-card reveal" style="transition-delay:0.1s">
+      <img class="team-photo" src="images/team-shuang.jpg" alt="Portrait of Shuang Li">
+      <h3>Shuang Li</h3>
+    </div>
+    <div class="team-card reveal" style="transition-delay:0.2s">
+      <img class="team-photo" src="images/team-xandra.jpeg" alt="Portrait of Xandra Wong">
+      <h3>Xandra Wong</h3>
+    </div>
+  </div>
+</section>
+
+<footer>
+  <div class="footer-logo">
+    <img class="brand-logo-img" src="images/logo.jpg" alt="AltRoute logo">
+    <span class="footer-brand">AltRoute</span>
+  </div>
+  <ul class="footer-links">
+    <li><a href="#overview">Overview</a></li>
+    <li><a href="#prototype">Prototype</a></li>
+    <li><a href="#videos">Videos</a></li>
+    <li><a href="#deliverables">Deliverables</a></li>
+    <li><a href="#team">Team</a></li>
+  </ul>
+  <span>CS185 HCI Course Project · 2026</span>
+</footer>
+
+<script>
+  const obs = new IntersectionObserver(entries => {
+    entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
+  }, { threshold: 0.08, rootMargin: '0px 0px -30px 0px' });
+  document.querySelectorAll('.reveal').forEach(el => obs.observe(el));
+
+  const secs = document.querySelectorAll('section[id]');
+  const navAs = document.querySelectorAll('.nav-links a');
+  window.addEventListener('scroll', () => {
+    let cur = '';
+    secs.forEach(s => { if (window.scrollY >= s.offsetTop - 100) cur = s.id; });
+    navAs.forEach(a => a.classList.toggle('active', a.getAttribute('href') === '#' + cur));
+  });
+</script>
+</body>
 </html>
