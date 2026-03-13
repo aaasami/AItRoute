@@ -108,7 +108,14 @@ nav {
 .btn-ghost:hover { border-color: white; background: rgba(255,255,255,0.08); }
 
 .hero-right { display: flex; justify-content: center; position: relative; z-index: 1; }
-.phone-wrap { position: relative; width: min(360px, 78vw); animation: float 5s ease-in-out infinite; }
+.phone-wrap {
+  position: relative;
+  width: min(346px, 78vw);
+  animation: float 5s ease-in-out infinite;
+  will-change: transform;
+  transform: translateZ(0);
+  backface-visibility: hidden;
+}
 @keyframes float { 0%,100%{transform:translateY(0)} 50%{transform:translateY(-12px)} }
 
 .chalk-ring {
@@ -132,7 +139,14 @@ nav {
 .phone-body { flex: 1; background: white; display: flex; flex-direction: column; overflow: hidden; }
 .phone-shot { width: 100%; height: 100%; object-fit: cover; display: block; }
 .phone-proto-embed { flex: 1; width: 100%; border: none; }
-.hero-proto-shot { width: 100%; height: auto; display: block; border-radius: 28px; box-shadow: 0 22px 48px rgba(0,0,0,0.38); }
+.hero-proto-shot {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 28px;
+  box-shadow: 0 22px 48px rgba(0,0,0,0.38);
+  image-rendering: -webkit-optimize-contrast;
+}
 .phone-header { background: #1ec8e0; padding: 10px 14px 12px; font-weight: 800; font-size: 1.3rem; letter-spacing: 0.1em; text-transform: uppercase; color: #0a1a2e; }
 .phone-content { flex: 1; padding: 11px 12px; display: flex; flex-direction: column; gap: 9px; overflow: hidden; }
 .phone-search { background: #f0f0f0; border-radius: 20px; padding: 7px 12px; font-size: 0.67rem; color: #999; display: flex; align-items: center; gap: 5px; }
@@ -311,8 +325,34 @@ section { padding: 80px 72px; }
 .d-card { background: #f7fbfd; border: 1.5px solid #dde8f0; border-radius: 14px; overflow: hidden; }
 .d-head { padding: 14px 14px 8px; font-size: 0.85rem; font-weight: 800; color: #0a1a2e; }
 .d-preview { aspect-ratio: 16/10; background: #eaf3f8; border-top: 1px solid #dde8f0; border-bottom: 1px solid #dde8f0; position: relative; }
+.d-preview a { display: block; width: 100%; height: 100%; }
 .d-preview iframe { width: 100%; height: 100%; border: none; }
 .d-preview img { width: 100%; height: 100%; object-fit: cover; display: block; }
+.d-preview-video { position: relative; overflow: hidden; }
+.d-preview-video::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(135deg, rgba(20,40,56,0.35), rgba(10,26,46,0.45));
+  pointer-events: none;
+}
+.d-play {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 54px;
+  height: 54px;
+  border-radius: 50%;
+  z-index: 2;
+  border: 2px solid rgba(255,255,255,0.45);
+  background: rgba(30,200,224,0.88);
+  display: grid;
+  place-items: center;
+  transition: transform 0.18s ease, background 0.18s ease;
+}
+.d-play svg { width: 16px; height: 16px; fill: #fff; margin-left: 2px; }
+.d-preview-video:hover .d-play { transform: translate(-50%, -50%) scale(1.05); background: #1ec8e0; }
 .d-preview-empty { height: 100%; display: grid; place-items: center; font-size: 0.8rem; color: #6f8090; text-align: center; padding: 12px; }
 .d-links { padding: 10px 14px 14px; display: flex; gap: 10px; flex-wrap: wrap; }
 .d-links a { font-size: 0.76rem; color: #0a1a2e; text-decoration: none; border-bottom: 1px solid #9bb3c4; }
@@ -491,14 +531,14 @@ footer { background: #0a1a2e; color: rgba(255,255,255,0.5); padding: 32px 72px; 
   <div class="proto-layout">
     <div class="reveal">
       <div class="proto-embed-wrap">
-        <iframe src="https://www.figma.com/embed?embed_host=share&hide-ui=1&url=https://www.figma.com/proto/mm2RdzlnWcByrynOd0TpXq/AltRoute?node-id=0-1&t=cCM0v3kg4W2yWc03-1" allowfullscreen title="AltRoute Figma Prototype"></iframe>
+        <iframe src="https://www.figma.com/embed?embed_host=share&hide-ui=1&url=https://www.figma.com/proto/mm2RdzlnWcByrynOd0TpXq/AltRoute?node-id=534-2516&p=f&t=t2ydLlWDmUYe9aXR-1&scaling=scale-down&content-scaling=fixed&page-id=344%3A293&starting-point-node-id=534%3A2516&show-proto-sidebar=1" allowfullscreen title="AltRoute Figma Prototype"></iframe>
       </div>
     </div>
     <div class="proto-side reveal" style="transition-delay:0.12s">
       <div class="proto-cta">
         <h3>Open Prototype in Figma</h3>
         <p>Explore the interactive prototype — generate personalized beta and follow AI-powered step-by-step guidance.</p>
-        <a href="https://www.figma.com/proto/mm2RdzlnWcByrynOd0TpXq/AltRoute?node-id=0-1&t=cCM0v3kg4W2yWc03-1" target="_blank" rel="noopener" class="btn-dark">↗ Open Prototype</a>
+        <a href="https://www.figma.com/proto/mm2RdzlnWcByrynOd0TpXq/AltRoute?node-id=534-2516&p=f&t=t2ydLlWDmUYe9aXR-1&scaling=scale-down&content-scaling=fixed&page-id=344%3A293&starting-point-node-id=534%3A2516&show-proto-sidebar=1" target="_blank" rel="noopener" class="btn-dark">↗ Open Prototype</a>
       </div>
       <div class="task-list">
         <div class="task">
@@ -588,8 +628,11 @@ footer { background: #0a1a2e; color: rgba(255,255,255,0.5); padding: 32px 72px; 
     </article>
     <article class="d-card reveal" style="transition-delay:0.1s">
       <div class="d-head">GR4 - Concept Video</div>
-      <div class="d-preview">
-        <img src="images/concept-video.jpg" alt="GR4 concept video preview">
+      <div class="d-preview d-preview-video">
+        <a href="https://www.youtube.com/embed/RCPi7rZCIkg?autoplay=1" target="_blank" rel="noopener" aria-label="Open GR4 concept video">
+          <img src="images/concept-video.jpg" alt="GR4 concept video preview">
+          <span class="d-play" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
+        </a>
       </div>
       <div class="d-links"><a href="https://www.youtube.com/embed/RCPi7rZCIkg?autoplay=1" target="_blank" rel="noopener">Open Video</a></div>
     </article>
@@ -611,11 +654,29 @@ footer { background: #0a1a2e; color: rgba(255,255,255,0.5); padding: 32px 72px; 
       </div>
     </article>
     <article class="d-card reveal" style="transition-delay:0.25s">
-      <div class="d-head">GR9 - Poster, Pitch &amp; Video of the Figma hi-fi prototype</div>
-      <div class="d-preview"><div class="d-preview-empty">Upload materials by noon today.</div></div>
-      <div class="d-links"><a href="https://www.canva.com/" target="_blank" rel="noopener">Open Link</a></div>
+      <div class="d-head">GR8 - Wizard-of-Oz Testing &amp; Mid-Fi Refinement</div>
+      <div class="d-preview">
+        <iframe src="https://www.canva.com/design/DAHDUPCFb1A/RvDFJ61i6n3fVSazHSEW7w/view?embed" loading="lazy" title="GR8 preview"></iframe>
+      </div>
+      <div class="d-links"><a href="https://www.canva.com/design/DAHDUPCFb1A/RvDFJ61i6n3fVSazHSEW7w/view?utm_content=DAHDUPCFb1A&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h8bb4b09dcf" target="_blank" rel="noopener">Open Link</a></div>
     </article>
     <article class="d-card reveal" style="transition-delay:0.3s">
+      <div class="d-head">GR9 - Pitch</div>
+      <div class="d-preview">
+        <iframe src="https://www.canva.com/design/DAHDqYz70DM/n_ArFcN7XSENsX-XjV0rlw/view?embed" loading="lazy" title="GR9 pitch preview"></iframe>
+      </div>
+      <div class="d-links">
+        <a href="https://www.canva.com/design/DAHDqYz70DM/n_ArFcN7XSENsX-XjV0rlw/view?utm_content=DAHDqYz70DM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h05721d6c76" target="_blank" rel="noopener">Open Link</a>
+      </div>
+    </article>
+    <article class="d-card reveal" style="transition-delay:0.35s">
+      <div class="d-head">GR9 - Poster</div>
+      <div class="d-preview">
+        <img src="images/poster.jpg" alt="GR9 poster preview">
+      </div>
+      <div class="d-links"><a href="images/poster.jpg" target="_blank" rel="noopener">Open Poster</a></div>
+    </article>
+    <article class="d-card reveal" style="transition-delay:0.4s">
       <div class="d-head">GR10 - Final Report</div>
       <div class="d-preview"><div class="d-preview-empty">Preview pending</div></div>
       <div class="d-links"><a href="https://docs.google.com/" target="_blank" rel="noopener">Open Link</a></div>
