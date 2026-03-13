@@ -294,6 +294,7 @@ section { padding: 80px 72px; }
 .vcard:hover { transform: translateY(-4px); box-shadow: 0 12px 36px rgba(30,200,224,0.15); border-color: #1ec8e0; }
 .vcard a { text-decoration: none; color: inherit; display: block; }
 .vthumb { aspect-ratio: 16/9; position: relative; display: flex; align-items: center; justify-content: center; overflow: hidden; }
+.vthumb video { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; background: #0a1a2e; }
 .vthumb-bg { position: absolute; inset: 0; }
 .vthumb-img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover; display: block; }
 .vthumb-img-home { width: 72%; height: auto; max-height: 82%; object-fit: contain; position: relative; z-index: 1; border-radius: 10px; box-shadow: 0 12px 30px rgba(0,0,0,0.3); }
@@ -304,6 +305,11 @@ section { padding: 80px 72px; }
 .vinfo { padding: 14px 16px 18px; }
 .vinfo h4 { font-size: 0.92rem; font-weight: 700; color: #0a1a2e; margin-bottom: 5px; }
 .vinfo p { font-size: 0.78rem; color: #888; line-height: 1.55; }
+.vactions { padding: 0 16px 16px; }
+.vactions .vdownload { display: inline-flex; align-items: center; padding: 8px 12px; border-radius: 999px; background: #0a1a2e; color: #ffffff; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; }
+.vactions .vdownload:hover { background: #1ec8e0; }
+.vactions .vyt-link { display: inline-flex; align-items: center; padding: 8px 12px; border-radius: 999px; background: #0a1a2e; color: #ffffff; font-size: 0.74rem; font-weight: 700; letter-spacing: 0.04em; text-transform: uppercase; text-decoration: none; }
+.vactions .vyt-link:hover { background: #1ec8e0; }
 .vcard.pending { opacity: 0.92; }
 .vcard.pending .vplay { border-color: rgba(255,255,255,0.3); background: rgba(255,255,255,0.08); }
 .vcard.pending:hover { transform: none; box-shadow: none; border-color: #dde8f0; }
@@ -477,7 +483,7 @@ footer { background: #0a1a2e; color: rgba(255,255,255,0.5); padding: 32px 72px; 
     <div class="hold-dot sm" style="background:radial-gradient(circle at 35% 35%,#e090e0,#8020a0)"></div>
     <span class="grade-pill" style="background:#601080;color:#e090e0">V9+</span>
   </div>
-  <p class="grade-strip-text">"Different bodies need different beta — AltRoute makes sure yours works for <em>you</em>."</p>
+  <p class="grade-strip-text">"Different Bodies. Different Solutions.</p>
 </div>
 
 <div class="divider"></div>
@@ -548,11 +554,12 @@ footer { background: #0a1a2e; color: rgba(255,255,255,0.5); padding: 32px 72px; 
         </div>
         <div class="task">
           <div class="task-h"><span class="chip cy">Moderate</span> Generate a personalized beta</div>
-          <div class="task-steps"><span>Scan route</span><span class="arr">›</span><span>Body profile</span><span class="arr">›</span><span>Get AI beta</span><span class="arr">›</span><span>Follow steps</span></div>
+          <div class="task-steps"><span>Generate Now</span><span class="arr">›</span><span>Upload Route</span><span class="arr">›</span><span>Select Holds</span><span class="arr">›</span><span>Enter Body Profile</span><span class="arr">›</span><span>Generate AI Beta</span></div>
+        </div>
         </div>
         <div class="task">
-          <div class="task-h"><span class="chip cr">Complex</span> Upload &amp; share your own beta</div>
-          <div class="task-steps"><span>Record attempt</span><span class="arr">›</span><span>Tag route &amp; profile</span><span class="arr">›</span><span>Publish</span></div>
+          <div class="task-h"><span class="chip cr">Complex</span> Complex Use the Generated Beta For Your Climb</div>
+          <div class="task-steps"><span>Enable Voice Mode(Optional)</span><span class="arr">›</span><span>Move Forward and Backwards with Playback Buttons</span><span class="arr">›</span><span>Jump to specific instructions with Numberings On The Bottom</span><span class="arr">›</span><span>Tap Return Button Tap "Save and Exit"</span></div>
         </div>
       </div>
     </div>
@@ -573,32 +580,38 @@ footer { background: #0a1a2e; color: rgba(255,255,255,0.5); padding: 32px 72px; 
   </div>
   <div class="video-grid">
     <div class="vcard reveal">
-      <a href="https://www.youtube.com/embed/RCPi7rZCIkg?autoplay=1" target="_blank" rel="noopener">
-        <div class="vthumb">
-          <img class="vthumb-img" src="images/concept-video.jpg" alt="Concept video preview">
-          <div class="vthumb-bg" style="background:linear-gradient(135deg,rgba(20,40,56,0.45),rgba(10,26,46,0.55))"></div>
-          <div class="vtag">Concept Video</div>
-          <div class="vplay"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-        </div>
-        <div class="vinfo">
-          <h4>Concept Video</h4>
-          <p>Project concept and problem framing for personalized climbing beta.</p>
-        </div>
-      </a>
+      <div class="vthumb">
+        <video controls preload="metadata" poster="images/concept-video.jpg">
+          <source src="images/Altroute_ConceptVideo.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="vtag">Concept Video</div>
+      </div>
+      <div class="vinfo">
+        <h4>Concept Video</h4>
+        <p>Project concept and problem framing for personalized climbing beta.</p>
+      </div>
+      <div class="vactions">
+        <a class="vdownload" href="images/Altroute_ConceptVideo.mp4" download="Altroute_ConceptVideo.mp4">Download Video</a>
+        <a class="vyt-link" href="https://www.youtube.com/embed/RCPi7rZCIkg?autoplay=1" target="_blank" rel="noopener">Open on YouTube</a>
+      </div>
     </div>
     <div class="vcard reveal" style="transition-delay:0.1s">
-      <a href="https://youtu.be/8ZfZVzqD3sw" target="_blank" rel="noopener">
-        <div class="vthumb">
-          <img class="vthumb-img-home" src="images/prototype-home.png" alt="Final demo homepage preview">
-          <div class="vthumb-bg" style="background:linear-gradient(135deg,#1a3040,#0e2030)"></div>
-          <div class="vtag">Final Demo</div>
-          <div class="vplay"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></div>
-        </div>
-        <div class="vinfo">
-          <h4>Final Demo</h4>
-          <p>Watch the final demo video for our end-to-end AltRoute experience.</p>
-        </div>
-      </a>
+      <div class="vthumb">
+        <video controls preload="metadata" poster="images/prototype-home.png">
+          <source src="images/Demo_Video.mp4" type="video/mp4">
+          Your browser does not support the video tag.
+        </video>
+        <div class="vtag">Final Demo</div>
+      </div>
+      <div class="vinfo">
+        <h4>Final Demo</h4>
+        <p>Watch the final demo video for our end-to-end AltRoute experience.</p>
+      </div>
+      <div class="vactions">
+        <a class="vdownload" href="images/Demo_Video.mp4" download="Demo_Video.mp4">Download Video</a>
+        <a class="vyt-link" href="https://youtu.be/8ZfZVzqD3sw" target="_blank" rel="noopener">Open on YouTube</a>
+      </div>
     </div>
   </div>
 </section>
@@ -619,69 +632,84 @@ footer { background: #0a1a2e; color: rgba(255,255,255,0.5); padding: 32px 72px; 
       <div class="d-preview">
         <iframe src="https://www.canva.com/design/DAG_HPCtNrk/9oNdAyf0n5kb042dMcFSiw/view?embed" loading="lazy" title="GR1 preview"></iframe>
       </div>
-      <div class="d-links"><a href="https://www.canva.com/design/DAG_HPCtNrk/9oNdAyf0n5kb042dMcFSiw/view?utm_content=DAG_HPCtNrk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hc3a89ac27c" target="_blank" rel="noopener">Open Link</a></div>
+      <div class="d-links">
+        <a href="https://www.canva.com/design/DAG_HPCtNrk/9oNdAyf0n5kb042dMcFSiw/view?utm_content=DAG_HPCtNrk&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=hc3a89ac27c" target="_blank" rel="noopener">Open Slide</a>
+        <a href="images/GR1.pdf" target="_blank" rel="noopener">PDF Version</a>
+      </div>
     </article>
     <article class="d-card reveal" style="transition-delay:0.05s">
       <div class="d-head">GR2 - POVs, HMWs &amp; Experience Prototypes</div>
       <div class="d-preview">
         <iframe src="https://www.canva.com/design/DAG_sJnTq4s/Aed57qoflLDYb0aBLwb0_g/view?embed" loading="lazy" title="GR2 preview"></iframe>
       </div>
-      <div class="d-links"><a href="https://www.canva.com/design/DAG_sJnTq4s/Aed57qoflLDYb0aBLwb0_g/view" target="_blank" rel="noopener">Open Link</a></div>
+      <div class="d-links">
+        <a href="https://www.canva.com/design/DAG_sJnTq4s/Aed57qoflLDYb0aBLwb0_g/view" target="_blank" rel="noopener">Open Slide</a>
+        <a href="images/GR2.pdf" target="_blank" rel="noopener">PDF Version</a>
+      </div>
     </article>
     <article class="d-card reveal" style="transition-delay:0.1s">
       <div class="d-head">GR4 - Concept Video</div>
-      <div class="d-preview d-preview-video">
-        <a href="https://www.youtube.com/embed/RCPi7rZCIkg?autoplay=1" target="_blank" rel="noopener" aria-label="Open GR4 concept video">
-          <img src="images/concept-video.jpg" alt="GR4 concept video preview">
-          <span class="d-play" aria-hidden="true"><svg viewBox="0 0 24 24"><polygon points="5 3 19 12 5 21 5 3"/></svg></span>
-        </a>
+      <div class="d-preview">
+        <iframe src="https://www.canva.com/design/DAHAZbwmVTM/kH0Mia_go8IkeYBkErs_1g/view?embed" loading="lazy" title="GR4 slides preview"></iframe>
       </div>
-      <div class="d-links"><a href="https://www.youtube.com/embed/RCPi7rZCIkg?autoplay=1" target="_blank" rel="noopener">Open Video</a></div>
+      <div class="d-links">
+        <a href="https://www.canva.com/design/DAHAZbwmVTM/kH0Mia_go8IkeYBkErs_1g/view?utm_content=DAHAZbwmVTM&amp;utm_campaign=designshare&amp;utm_medium=link2&amp;utm_source=uniquelinks&amp;utlId=h0963ae1aa5" target="_blank" rel="noopener">Open Slide</a>
+        <a href="images/GR4.pdf" target="_blank" rel="noopener">PDF Version</a>
+        <a href="https://www.youtube.com/embed/RCPi7rZCIkg?autoplay=1" target="_blank" rel="noopener">Concept Video</a>
+      </div>
+
     </article>
-    <article class="d-card reveal" style="transition-delay:0.15s">
+    <article class="d-card reveal" style="transition-delay:0.2s">
       <div class="d-head">GR5 - Sketching, Low-Fi &amp; User Testing</div>
       <div class="d-preview">
         <iframe src="https://www.canva.com/design/DAHBDbc8QNU/UWzwgrMEL2zldpnsdleL9Q/view?embed" loading="lazy" title="GR5 preview"></iframe>
       </div>
-      <div class="d-links"><a href="https://www.canva.com/design/DAHBDbc8QNU/UWzwgrMEL2zldpnsdleL9Q/view" target="_blank" rel="noopener">Open Link</a></div>
+      <div class="d-links">
+        <a href="https://www.canva.com/design/DAHBDbc8QNU/UWzwgrMEL2zldpnsdleL9Q/view" target="_blank" rel="noopener">Open Slide</a>
+        <a href="images/GR5.pdf" target="_blank" rel="noopener">PDF Version</a>
+      </div>
     </article>
-    <article class="d-card reveal" style="transition-delay:0.2s">
+    <article class="d-card reveal" style="transition-delay:0.25s">
       <div class="d-head">GR6 - Medium-Fi Figma Prototype</div>
       <div class="d-preview">
         <iframe src="https://www.canva.com/design/DAHBzef16gM/evD3CLce8GNJb8pBJSdbOA/view?embed" loading="lazy" title="GR6a preview"></iframe>
       </div>
       <div class="d-links">
-        <a href="https://www.canva.com/design/DAHBzef16gM/evD3CLce8GNJb8pBJSdbOA/view" target="_blank" rel="noopener">Open Link</a>
-        <a href="https://docs.google.com/document/d/1phgdvpClwRCrVRB7n30kXYmqSvAyYi6rchHqxfYr-78/edit?usp=sharing" target="_blank" rel="noopener">README</a>
+        <a href="https://www.canva.com/design/DAHBzef16gM/evD3CLce8GNJb8pBJSdbOA/view" target="_blank" rel="noopener">Open Slide</a>
+        <a href="images/GR6.pdf" target="_blank" rel="noopener">PDF Version</a>
+        <a href="images/AltRoute_README.pdf" target="_blank" rel="noopener">README</a>
+        <a href="https://www.figma.com/proto/mm2RdzlnWcByrynOd0TpXq/AltRoute?node-id=116-639&p=f&t=g7jlq6JI6XrzgkmZ-1&scaling=scale-down&content-scaling=fixed&page-id=0%3A1&starting-point-node-id=116%3A639&show-proto-sidebar=1" target="_blank" rel="noopener">Figma</a>
       </div>
     </article>
-    <article class="d-card reveal" style="transition-delay:0.25s">
-      <div class="d-head">GR8 - Wizard-of-Oz Testing &amp; Mid-Fi Refinement</div>
+    <article class="d-card reveal" style="transition-delay:0.3s">
+      <div class="d-head">GR8 - Interactive High-Fi Prototype</div>
       <div class="d-preview">
         <iframe src="https://www.canva.com/design/DAHDUPCFb1A/RvDFJ61i6n3fVSazHSEW7w/view?embed" loading="lazy" title="GR8 preview"></iframe>
       </div>
-      <div class="d-links"><a href="https://www.canva.com/design/DAHDUPCFb1A/RvDFJ61i6n3fVSazHSEW7w/view?utm_content=DAHDUPCFb1A&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h8bb4b09dcf" target="_blank" rel="noopener">Open Link</a></div>
+      <div class="d-links">
+        <a href="https://www.canva.com/design/DAHDUPCFb1A/RvDFJ61i6n3fVSazHSEW7w/view?utm_content=DAHDUPCFb1A&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h8bb4b09dcf" target="_blank" rel="noopener">Open Slide</a>
+        <a href="images/GR8.pdf" target="_blank" rel="noopener">PDF Version</a>
+        <a href="https://www.figma.com/proto/mm2RdzlnWcByrynOd0TpXq/AltRoute?node-id=534-2516&t=JUAPKu1hpHYlGVG3-1&scaling=scale-down&content-scaling=fixed&page-id=344%3A293&starting-point-node-id=534%3A2516&show-proto-sidebar=1" target="_blank" rel="noopener">Figma</a>
+      </div>
     </article>
-    <article class="d-card reveal" style="transition-delay:0.3s">
-      <div class="d-head">GR9 - Pitch</div>
+    <article class="d-card reveal" style="transition-delay:0.35s">
+      <div class="d-head">GR9 - Slide & Poster & Pitch & Video</div>
       <div class="d-preview">
         <iframe src="https://www.canva.com/design/DAHDqYz70DM/n_ArFcN7XSENsX-XjV0rlw/view?embed" loading="lazy" title="GR9 pitch preview"></iframe>
       </div>
       <div class="d-links">
-        <a href="https://www.canva.com/design/DAHDqYz70DM/n_ArFcN7XSENsX-XjV0rlw/view?utm_content=DAHDqYz70DM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h05721d6c76" target="_blank" rel="noopener">Open Link</a>
+        <a href="https://www.canva.com/design/DAHDqYz70DM/n_ArFcN7XSENsX-XjV0rlw/view?utm_content=DAHDqYz70DM&utm_campaign=designshare&utm_medium=link2&utm_source=uniquelinks&utlId=h05721d6c76" target="_blank" rel="noopener">Open Slide</a>
+        <a href="images/poster.jpg" target="_blank" rel="noopener">Open Poster</a>
+        <a href="images/GR9_Scripts.pdf" target="_blank" rel="noopener">Pitch Script</a>
+        <a href="https://youtu.be/8ZfZVzqD3sw" target="_blank" rel="noopener">Demo Video</a>
       </div>
-    </article>
-    <article class="d-card reveal" style="transition-delay:0.35s">
-      <div class="d-head">GR9 - Poster</div>
-      <div class="d-preview">
-        <img src="images/poster.jpg" alt="GR9 poster preview">
-      </div>
-      <div class="d-links"><a href="images/poster.jpg" target="_blank" rel="noopener">Open Poster</a></div>
     </article>
     <article class="d-card reveal" style="transition-delay:0.4s">
       <div class="d-head">GR10 - Final Report</div>
-      <div class="d-preview"><div class="d-preview-empty">Preview pending</div></div>
-      <div class="d-links"><a href="https://docs.google.com/" target="_blank" rel="noopener">Open Link</a></div>
+      <div class="d-preview">
+        <iframe src="https://docs.google.com/document/d/1ZtcZ1s5R2Yzoljjht2LfemSDjwoSELq4ymqiNdzwawI/preview" loading="lazy" title="GR10 final report preview"></iframe>
+      </div>
+      <div class="d-links"><a href="https://docs.google.com/document/d/1ZtcZ1s5R2Yzoljjht2LfemSDjwoSELq4ymqiNdzwawI/edit?usp=sharing" target="_blank" rel="noopener">Open Link</a></div>
     </article>
   </div>
 </section>
@@ -697,6 +725,7 @@ footer { background: #0a1a2e; color: rgba(255,255,255,0.5); padding: 32px 72px; 
     </div>
     <h2 class="s-title s-title-center">Team</h2>
     <div class="s-underline"></div>
+    <p>*Our team contributed equally to all parts of the project, wihtout assigning specific roles.</p>
   </div>
     <div class="team-grid">
       <div class="team-card reveal">
